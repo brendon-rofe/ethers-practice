@@ -13,11 +13,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "ethers": "^5.5.4"
+  },
   "bugs": {
     "url": "https://github.com/Bravo1B9/ethers-practice/issues"
   },
-  "homepage": "https://github.com/Bravo1B9/ethers-practice#readme",
-  "dependencies": {
-    "ethers": "^6.0.8"
-  }
+  "homepage": "https://github.com/Bravo1B9/ethers-practice#readme"
 }
