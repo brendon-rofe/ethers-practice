@@ -16,7 +16,7 @@ const erc20Address = "0x59200ca2bb109A97EB3c2Ca932c3Fa0152731FAf";
 const erc20Contract = new ethers.Contract(erc20Address, erc20Abi, rpcProvider);
 
 const getERC20TransferEvents = async (address) => {
-  const transferFilter = erc20Contract.filters.Transfer(null, address, null);
+  const transferFilter = erc20Contract.filters.Transfer(null, null, null);
   const transferEvents = await erc20Contract.queryFilter(transferFilter);
   const timestamps = [];
   for (i = 0; i < transferEvents.length; i++) {
@@ -24,7 +24,7 @@ const getERC20TransferEvents = async (address) => {
     timestamps.push(new Date(timestamp * 1000));
   }
   // console.log(timestamps);
-  console.log(transferEvents[0].args);
+  console.log(transferEvents);
 };
 
 const getEthTransfers = (ethAddress) => {
@@ -45,6 +45,6 @@ const getEthTransfers = (ethAddress) => {
     });
 };
 
-getERC20TransferEvents(ethAddress2);
+getERC20TransferEvents(ethAddress1);
 
 // getEthTransfers(ethAddress1);

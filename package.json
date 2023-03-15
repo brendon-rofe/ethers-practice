@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ethers": "^5.5.4"
+    "ethers": "^5.2.0"
   },
   "bugs": {
     "url": "https://github.com/Bravo1B9/ethers-practice/issues"
