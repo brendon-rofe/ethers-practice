@@ -1,8 +1,7 @@
 const ethers = require("ethers");
 
-const contractAddress = "0x59200ca2bb109A97EB3c2Ca932c3Fa0152731FAf"; // Replace with the actual contract address
+const contractAddress = "0x59200ca2bb109A97EB3c2Ca932c3Fa0152731FAf";
 const contractABI = [
-  // Replace with the actual contract ABI
   "function balanceOf(address account) view returns (uint256)",
   "function transfer(address recipient, uint256 amount) returns (bool)",
   "function approve(address spender, uint256 amount) returns (bool)",
@@ -15,9 +14,9 @@ const wallet = new ethers.Wallet(privateKey, provider);
 
 const contract = new ethers.Contract(contractAddress, contractABI, wallet);
 
-const spenderAddress = "0xd140a68aBe78548C8b4CB79b6ceC226e72E3c764"; // Replace with the address you want to send the tokens to
-const fromAddress = "0x94Cd4C8b08bEc0B960C613d1af83311F467F1b1A"; // Replace with the address you want to send the tokens from
-const amount = ethers.utils.parseUnits("100", 0); // Replace with the amount of tokens you want to send (in wei)
+const spenderAddress = "0xd140a68aBe78548C8b4CB79b6ceC226e72E3c764";
+const fromAddress = "0x94Cd4C8b08bEc0B960C613d1af83311F467F1b1A";
+const amount = ethers.utils.parseUnits("100", 0);
 
 const sendERC20 = async () => {
   const approvalTx = await contract.approve(spenderAddress, amount);

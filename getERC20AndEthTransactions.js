@@ -45,6 +45,6 @@ const getEthTransfers = (ethAddress) => {
     });
 };
 
-getERC20TransferEvents(ethAddress1);
+// getERC20TransferEvents(ethAddress1);
 
-// getEthTransfers(ethAddress1);
+getEthTransfers(ethAddress1);
